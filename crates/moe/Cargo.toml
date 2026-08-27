@@ -1,0 +1,21 @@
+[package]
+name = "cuda-oxide-moe"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "MOE cuda-oxide kernels"
+
+[dependencies]
+cuda-oxide.workspace = true
+cuda-oxide-kernel-core.workspace = true
+cuda-oxide-gemm.workspace = true
+cuda-oxide-quant.workspace = true
+
+[dev-dependencies]
+# Only testing / benchmark dependencies here.
+
+[lints]
+workspace = true
+

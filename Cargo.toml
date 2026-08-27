@@ -1,0 +1,46 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/kernel-core",
+    "crates/ops",
+    "crates/sampling",
+    "crates/kv-cache",
+    "crates/quant",
+    "crates/gemm",
+    "crates/paged-attention",
+    "crates/flash-attention",
+    "crates/mla",
+    "crates/linear-attention",
+    "crates/moe",
+    "crates/marlin",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+repository = "https://github.com/vivarium-ai/cuda-oxide-kernels"
+rust-version = "1.XX"
+
+[workspace.dependencies]
+cuda-oxide = { git = "https://github.com/...", rev = "PINNED_COMMIT" }
+
+kernel-core = { path = "crates/kernel-core" }
+ops = { path = "crates/ops" }
+sampling = { path = "crates/sampling" }
+kv-cache = { path = "crates/kv-cache" }
+quant = { path = "crates/quant" }
+gemm = { path = "crates/gemm" }
+paged-attention = { path = "crates/paged-attention" }
+flash-attention = { path = "crates/flash-attention" }
+mla = { path = "crates/mla" }
+linear-attention = { path = "crates/linear-attention" }
+moe = { path = "crates/moe" }
+marlin = { path = "crates/marlin" }
+
+[workspace.lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[workspace.lints.clippy]
+all = "warn"
+pedantic = "warn"

@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - "r[0-9]*"
+      - "v[0-9]*"
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/vivarium-ai/cuda-oxide-dev-sv:amd64
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show environment
+        run: |
+          uname -a
+          rustc --version
+          cargo --version
+
+      - name: Build
+        run: make build
+
+      - name: Test
+        run: make test

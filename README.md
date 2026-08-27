@@ -26,6 +26,19 @@ The following is the toplevel organization of this repository:
 
 These are the Rust CUDA kernels included in this repository:
 
+- [`flash-attention`](/docs/flash-attention.md)
+- [`gemm`](/docs/gemm.md)
+- [`kernel-core`](/docs/kernel-core.md)
+- [`kv-cache`](/docs/kv-cache.md)
+- [`linear-attention`](/docs/linear-attention.md)
+- [`marlin`](/docs/marlin.md)
+- [`mla`](/docs/mla.md)
+- [`moe`](/docs/moe.md)
+- [`ops`](/docs/ops.md)
+- [`paged-attention`](/docs/paged-attention.md)
+- [`quant`](/docs/quant.md)
+- [`sampling`](/docs/sampling.md)
+
 ## License
 
 This project is licensed under the [MIT License](/LICENSE).

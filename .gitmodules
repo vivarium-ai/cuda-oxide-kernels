@@ -1,0 +1,12 @@
+[submodule "upstream/attention.rs"]
+	path = upstream/attention.rs
+	url = https://github.com/vivarium-ai/attention.rs.git
+	branch = cuda-oxide-kernels
+[submodule "upstream/flashattn.rs"]
+	path = upstream/flashattn.rs
+	url = https://github.com/vivarium-ai/flashattn.rs.git
+	branch = cuda-oxide-kernels
+[submodule "upstream/xinfer"]
+	path = upstream/xinfer
+	url = https://github.com/vivarium-ai/xinfer.git
+	branch = cuda-oxide-kernels
