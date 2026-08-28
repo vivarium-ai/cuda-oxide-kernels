@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: ghcr.io/vivarium-ai/cuda-oxide-dev-sv:amd64
+      image: ghcr.io/vivarium-ai/cuda-oxide-kernels-dev:latest
 
     steps:
       - name: Checkout repository
